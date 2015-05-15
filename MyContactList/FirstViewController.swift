@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var scrollview: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,6 @@ class FirstViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
 }
 
