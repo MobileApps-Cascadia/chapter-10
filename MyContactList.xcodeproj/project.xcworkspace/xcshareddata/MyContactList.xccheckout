@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6E496C84-573C-4900-9622-A7C12CD64519</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyContactList</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D636CF8BC4485061760AE3320789A2D73812FCE2</key>
+		<string>https://github.com/Cascadia-HiromiForgette/chapter-10.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyContactList.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D636CF8BC4485061760AE3320789A2D73812FCE2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Cascadia-HiromiForgette/chapter-10.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D636CF8BC4485061760AE3320789A2D73812FCE2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D636CF8BC4485061760AE3320789A2D73812FCE2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>chapter-10</string>
+		</dict>
+	</array>
+</dict>
+</plist>
