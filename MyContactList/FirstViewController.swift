@@ -36,11 +36,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var btnChange: UIButton!
     
 
-    // Solution #1 for changing edit mode with view editing - doens't work!
+    // Solution #1 for changing edit mode with view editing - doesn't work!
     // Both View and Edit allows editing!
     @IBAction func changeEditMode(sender: AnyObject) {
-        
-        var textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
         
         // When View is selected
         if(sgmtEditMode.selectedSegmentIndex == 0){
@@ -56,7 +54,7 @@ class FirstViewController: UIViewController {
 
     
     
-//    // Solution #2 for changing edit mode with individual object - doens't work!
+//    // Solution #2 for changing edit mode with individual object - doesn't work!
 //    // Both View and Edit allows editing!    
 //    @IBAction func changeEditMode(sender: AnyObject) {
 //        
@@ -94,7 +92,7 @@ class FirstViewController: UIViewController {
     
     
     
-//    // Solution #3 for changing edit mode using for loop - doens't work!
+//    // Solution #3 for changing edit mode using for loop - doesn't work!
 //    //  A bunch of syntax error in for loops!
 //    @IBAction func changeEditMode(sender: AnyObject) {
 //        
