@@ -21,13 +21,99 @@ class FirstViewController: UIViewController {
     }
 
     
+    // Implement View/Edit Segmented Control
     @IBOutlet weak var sgmtEditMode: UISegmentedControl!
+    @IBOutlet weak var txtFirstName: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
+    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var txtState: UITextField!
+    @IBOutlet weak var txtZip: UITextField!
+    @IBOutlet weak var txtCell: UITextField!
+    @IBOutlet weak var txtHomePhone: UITextField!
+    @IBOutlet weak var txtEmailAddress: UITextField!
+    @IBOutlet weak var lblBirthdate: UILabel!
+    @IBOutlet weak var btnChange: UIButton!
+    
+
+    // Solution #1 for changing edit mode with view editing - doens't work!
+    // Both View and Edit allows editing!
+    @IBAction func changeEditMode(sender: AnyObject) {
+        
+        var textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
+        
+        // When View is selected
+        if(sgmtEditMode.selectedSegmentIndex == 0){
+            self.view.endEditing(false)
+        }
+        
+        // When Edit is selected
+        else if(sgmtEditMode.selectedSegmentIndex == 1){
+            self.view.endEditing(true)        }
+        
+    }
+
 
     
-    @IBAction func changeEditMode(sender: AnyObject) {
-    }
+    
+//    // Solution #2 for changing edit mode with individual object - doens't work!
+//    // Both View and Edit allows editing!    
+//    @IBAction func changeEditMode(sender: AnyObject) {
+//        
+//        // When View is selected
+//        if(sgmtEditMode.selectedSegmentIndex == 0){
+//            txtFirstName.enabled = false
+//            txtLastName.enabled = false
+//            txtFirstName.enabled = false
+//            txtAddress.enabled = false
+//            txtCity.enabled = false
+//            txtState.enabled = false
+//            txtZip.enabled = false
+//            txtCell.enabled = false
+//            txtHomePhone.enabled = false
+//            txtEmailAddress.enabled = false
+//            btnChange.enabled = false
+//        }
+//            
+//            // When Edit is selected
+//        else if(sgmtEditMode.selectedSegmentIndex == 1){
+//            txtFirstName.enabled = true
+//            txtLastName.enabled = true
+//            txtFirstName.enabled = true
+//            txtAddress.enabled = true
+//            txtCity.enabled = true
+//            txtState.enabled = true
+//            txtZip.enabled = true
+//            txtCell.enabled = true
+//            txtHomePhone.enabled = true
+//            txtEmailAddress.enabled = true
+//            btnChange.enabled = true
+//        }
+//    }
     
     
     
+    
+//    // Solution #3 for changing edit mode using for loop - doens't work!
+//    //  A bunch of syntax error in for loops!
+//    @IBAction func changeEditMode(sender: AnyObject) {
+//        
+//        // array for all the text fields
+//        var textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
+//        
+//        // When View is selected
+//        if(sgmtEditMode.selectedSegmentIndex == 0){
+//            for (UITextField txtfield in textFields)
+//                txtfield.enabled = false
+//        }
+//    
+//
+//        // When Edit is selected
+//        else if(sgmtEditMode.selectedSegmentIndex == 1){
+//            for (UITextField txtfield in textFields)
+//                txtfield.enabled = true    }
+//
+//    }
+
 }
 

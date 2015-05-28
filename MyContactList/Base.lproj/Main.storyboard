@@ -16,6 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="T6l-Mz-xQ4">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="View"/>
+                                    <segment title="Edit"/>
+                                </segments>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="72" width="123" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeEditMode:" destination="9pv-A4-QxB" eventType="valueChanged" id="fTW-C3-e7u"/>
+                                </connections>
+                            </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Z2W-Jy-PZb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -84,6 +97,9 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRh-Po-4dR">
                                         <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -196,7 +212,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="114" width="400" height="637"/>
+                                    <rect key="frame" x="0.0" y="89" width="400" height="637"/>
                                     <mask key="subviews">
                                         <include reference="7VX-A6-qkE"/>
                                         <include reference="nXh-SU-iuj"/>
@@ -219,37 +235,35 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="T6l-Mz-xQ4">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Edit"/>
-                                </segments>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="72" width="123" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="changeEditMode:" destination="9pv-A4-QxB" eventType="valueChanged" id="fTW-C3-e7u"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Z2W-Jy-PZb"/>
                                 <exclude reference="T6l-Mz-xQ4"/>
+                                <exclude reference="Z2W-Jy-PZb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Z2W-Jy-PZb"/>
                                 <include reference="T6l-Mz-xQ4"/>
+                                <include reference="Z2W-Jy-PZb"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wVA-pm-sdU"/>
                     <connections>
+                        <outlet property="btnChange" destination="EdI-HU-ZiD" id="gjM-64-p8u"/>
+                        <outlet property="lblBirthdate" destination="duv-z2-arV" id="4D7-Qy-tlG"/>
                         <outlet property="sgmtEditMode" destination="T6l-Mz-xQ4" id="TMz-XE-bFX"/>
+                        <outlet property="txtAddress" destination="VBt-YC-vyH" id="sFr-qy-7JW"/>
+                        <outlet property="txtCell" destination="vuc-rS-qyY" id="3Ca-An-ud4"/>
+                        <outlet property="txtCity" destination="QQx-ad-FEw" id="sPl-ov-wh8"/>
+                        <outlet property="txtEmailAddress" destination="vu0-KU-xvX" id="IKN-nG-GJw"/>
+                        <outlet property="txtFirstName" destination="uRh-Po-4dR" id="gAP-mT-d2d"/>
+                        <outlet property="txtHomePhone" destination="l3z-Le-bn1" id="OWt-Hk-nvJ"/>
+                        <outlet property="txtLastName" destination="1Ib-wV-cmr" id="JfY-i6-Gqy"/>
+                        <outlet property="txtState" destination="MM7-sr-G0K" id="Iy1-4U-XV7"/>
+                        <outlet property="txtZip" destination="o8P-hf-Lme" id="w9k-kj-IAp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
