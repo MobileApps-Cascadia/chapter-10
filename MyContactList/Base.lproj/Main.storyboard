@@ -228,6 +228,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="144" y="72" width="123" height="29"/>
                                 </variation>
+                                <connections>
+                                    <action selector="changeEditMode:" destination="9pv-A4-QxB" eventType="valueChanged" id="fTW-C3-e7u"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -245,6 +248,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wVA-pm-sdU"/>
+                    <connections>
+                        <outlet property="sgmtEditMode" destination="T6l-Mz-xQ4" id="TMz-XE-bFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,6 +20,14 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBOutlet weak var sgmtEditMode: UISegmentedControl!
 
+    
+    @IBAction func changeEditMode(sender: AnyObject) {
+    }
+    
+    
+    
 }
 
