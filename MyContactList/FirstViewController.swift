@@ -16,6 +16,8 @@ class FirstViewController: UIViewController {
         //Looks for single or multiple taps.
         var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
+        //Disable all the texts fields when the page is loaded first time
+        changeEditMode(self)
     }
     
     //Calls this function when the tap is recognized.
@@ -53,20 +55,24 @@ class FirstViewController: UIViewController {
         let textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
         
         
-        for txtfield in textFields
-        {
+        
             // When View is selected
             if(sgmtEditMode?.selectedSegmentIndex == 0){
-                txtfield.enabled = false
+                for txtfield in textFields
+                {
+                    txtfield.enabled = false
+                }
             }
                 
-                // When Edit is selected
+            // When Edit is selected
             else if(sgmtEditMode?.selectedSegmentIndex == 1){
-                txtfield.enabled = true
+                for txtfield in textFields
+                {
+                    txtfield.enabled = true
+                }
+                
             }
-            
-        }
+        
     }
-
 }
 
