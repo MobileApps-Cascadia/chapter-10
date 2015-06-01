@@ -13,7 +13,17 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //Looks for single or multiple taps.
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    
+    //Calls this function when the tap is recognized.
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,82 +46,27 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var btnChange: UIButton!
     
 
-    // Solution #1 for changing edit mode with view editing - doesn't work!
-    // Both View and Edit allows editing!
+    // View/Edit Segmented Control
     @IBAction func changeEditMode(sender: AnyObject) {
         
-        // When View is selected
-        if(sgmtEditMode.selectedSegmentIndex == 0){
-            self.view.endEditing(false)
+        // array for all the text fields
+        let textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
+        
+        
+        for txtfield in textFields
+        {
+            // When View is selected
+            if(sgmtEditMode?.selectedSegmentIndex == 0){
+                txtfield.enabled = false
+            }
+                
+                // When Edit is selected
+            else if(sgmtEditMode?.selectedSegmentIndex == 1){
+                txtfield.enabled = true
+            }
+            
         }
-        
-        // When Edit is selected
-        else if(sgmtEditMode.selectedSegmentIndex == 1){
-            self.view.endEditing(true)        }
-        
     }
-
-
-    
-    
-//    // Solution #2 for changing edit mode with individual object - doesn't work!
-//    // Both View and Edit allows editing!    
-//    @IBAction func changeEditMode(sender: AnyObject) {
-//        
-//        // When View is selected
-//        if(sgmtEditMode.selectedSegmentIndex == 0){
-//            txtFirstName.enabled = false
-//            txtLastName.enabled = false
-//            txtFirstName.enabled = false
-//            txtAddress.enabled = false
-//            txtCity.enabled = false
-//            txtState.enabled = false
-//            txtZip.enabled = false
-//            txtCell.enabled = false
-//            txtHomePhone.enabled = false
-//            txtEmailAddress.enabled = false
-//            btnChange.enabled = false
-//        }
-//            
-//            // When Edit is selected
-//        else if(sgmtEditMode.selectedSegmentIndex == 1){
-//            txtFirstName.enabled = true
-//            txtLastName.enabled = true
-//            txtFirstName.enabled = true
-//            txtAddress.enabled = true
-//            txtCity.enabled = true
-//            txtState.enabled = true
-//            txtZip.enabled = true
-//            txtCell.enabled = true
-//            txtHomePhone.enabled = true
-//            txtEmailAddress.enabled = true
-//            btnChange.enabled = true
-//        }
-//    }
-    
-    
-    
-    
-//    // Solution #3 for changing edit mode using for loop - doesn't work!
-//    //  A bunch of syntax error in for loops!
-//    @IBAction func changeEditMode(sender: AnyObject) {
-//        
-//        // array for all the text fields
-//        var textFields = [txtFirstName, txtLastName, txtAddress, txtCity, txtState, txtZip, txtCell, txtHomePhone, txtEmailAddress]
-//        
-//        // When View is selected
-//        if(sgmtEditMode.selectedSegmentIndex == 0){
-//            for (UITextField txtfield in textFields)
-//                txtfield.enabled = false
-//        }
-//    
-//
-//        // When Edit is selected
-//        else if(sgmtEditMode.selectedSegmentIndex == 1){
-//            for (UITextField txtfield in textFields)
-//                txtfield.enabled = true    }
-//
-//    }
 
 }
 
