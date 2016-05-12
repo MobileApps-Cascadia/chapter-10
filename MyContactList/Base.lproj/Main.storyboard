@@ -88,6 +88,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-ke-pAe">
+                                <rect key="frame" x="0.0" y="114" width="600" height="437"/>
+                                <animations/>
+                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="veV-tX-Ofd">
                                 <rect key="frame" x="20" y="246" width="560" height="30"/>
                                 <subviews>
@@ -145,7 +149,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -169,7 +173,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -217,7 +221,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="egg-E4-5kI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="VfA-fR-SEv"/>
@@ -228,7 +232,7 @@
                                         <rect key="frame" x="290" y="0.0" width="270" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -253,7 +257,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -261,7 +265,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-z0-Nik">
                                 <rect key="frame" x="20" y="481" width="560" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pv-UD-28P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pv-UD-28P">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                         <animations/>
                                         <constraints>
@@ -271,7 +275,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-Vi-eS7">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-Vi-eS7">
                                         <rect key="frame" x="185" y="0.0" width="200" height="30"/>
                                         <animations/>
                                         <constraints>
@@ -279,7 +283,7 @@
                                             <constraint firstAttribute="width" constant="200" id="ZD2-2G-9xR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="ZD2-2G-9xR"/>
@@ -325,6 +329,7 @@
                             <constraint firstItem="Egl-sp-DsE" firstAttribute="top" secondItem="LZj-kH-YM7" secondAttribute="bottom" constant="303" id="WnA-NC-jBZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Dwi-ZK-nEw" secondAttribute="leading" id="XKU-dq-fpa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Egl-sp-DsE" secondAttribute="trailing" id="ZD7-jB-078"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hbh-ke-pAe" secondAttribute="trailing" constant="-20" id="ZZi-ZA-6P4"/>
                             <constraint firstItem="x4N-wI-BVi" firstAttribute="top" secondItem="LZj-kH-YM7" secondAttribute="bottom" constant="59" id="aRd-wq-bdL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BBp-ce-5Rt" secondAttribute="trailing" id="adU-8n-pcl"/>
                             <constraint firstItem="sgK-Kv-Hcq" firstAttribute="top" secondItem="LZj-kH-YM7" secondAttribute="bottom" constant="223" id="auP-Ll-Z02"/>
