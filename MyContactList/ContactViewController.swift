@@ -40,11 +40,10 @@ class ContactViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
     
-    // Change the borderStyle and enabled attributes for all the txt elements based on
-    // whether the user is editing the contact.
+    
     @IBAction func changeEditMode(sender: AnyObject) {
         let textFields = [txtName, txtAddress, txtCity, txtState, txtZip, txtCell, txtPhone, txtEmail]
         
