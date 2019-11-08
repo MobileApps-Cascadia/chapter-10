@@ -10,7 +10,12 @@ import UIKit
 
 class LMAContactsController: UIViewController {
 
+    
     @IBOutlet weak var _scrollView: UIScrollView!
+    
+    @IBOutlet weak var changeEditMode: UISegmentedControl!
+    @IBOutlet weak var sgmtEditMode: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _scrollView.contentSize = CGSize(width: 320, height: 500)
